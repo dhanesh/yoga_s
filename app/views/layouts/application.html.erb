@@ -7,8 +7,30 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <table align="center" width="80%" id="page">
+    <tr>
+      <td>
+        <table id="header_img" cellpadding="10" cellspacing="10">
+          <tr height="80px" colspan="4">
+            <td>
+              <img src="http://research.nodebox.net/data/media/header.jpg" />
+            </td>
+          </tr>
+        </table>
+        <table id="nav_bar" cellpadding="10" cellspacing="10">
+          <tr>
+            <td><%= link_to "Home", root_path %></td>
+            <td>Blog</td>
+            <td>Gallery</td>
+            <td>Discussion</td>
+            <td>Login</td>
+          </tr>
+        </table>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
