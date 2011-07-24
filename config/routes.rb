@@ -1,8 +1,8 @@
 YogaS::Application.routes.draw do
   
-  devise_for :accounts
-
   root :to => 'home#index'
+  
+  devise_for :accounts
   
   # get "home/index"
 

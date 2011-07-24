@@ -23,7 +23,13 @@
             <td>Blog</td>
             <td>Gallery</td>
             <td>Discussion</td>
-            <td>Login</td>
+            <td>
+            <% if current_account then %>
+              <%= link_to "Sign Out", destroy_account_session_path, :method => :delete %>
+            <% else %>
+              <%= link_to 'Sign In', new_account_session_path %>
+            <% end %>
+            </td>
           </tr>
         </table>
         <p class="notice"><%= notice %></p>
