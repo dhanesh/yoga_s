@@ -1,5 +1,7 @@
 YogaS::Application.routes.draw do
   
+  resources :posts, :path => "/blog"
+
   root :to => 'home#index'
   
   devise_for :accounts
