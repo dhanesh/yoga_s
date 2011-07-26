@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <td>
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <h1><%= @post.title %></h1>
+      </p>
+      <p><%= @post.content %></p> 
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+    </td>
+  </tr>
+</table>

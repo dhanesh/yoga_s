@@ -1,0 +1,20 @@
+<table>
+  
+
+<% @posts.each do |post| %>
+  <tr>
+    <td>
+      <p><h1><%= link_to post.title, post %></h1></p>
+      <p><%= post.content %></p>
+      <% if account_signed_in? %>
+      <p><%= link_to 'Edit', edit_post_path(post) unless current_account.role == "user" %> <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete unless current_account.role == "user"%> </p>
+      <% end %>
+    <td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% if account_signed_in? %>
+<%= link_to 'New Post', new_post_path unless current_account.role == "user" %>
+<% end %>
