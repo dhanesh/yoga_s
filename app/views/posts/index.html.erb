@@ -5,9 +5,15 @@
   <tr>
     <td>
       <p><h1><%= link_to post.title, post %></h1></p>
-      <p><%= post.content[0, 300] %> <%= link_to "Read more", post %></p>
+      <p>
+      <% if post.content.length > 350 then %>
+        <%= post.content[0, 300] %> <%= link_to "Read more", post %>
+      <% else %>
+        <%= post.content %>
+      <% end %>
+      </p>
       <% if account_signed_in? %>
-      <p><%= link_to 'Edit', edit_post_path(post) unless current_account.role == "user" %> <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete unless current_account.role == "user"%> </p>
+      <p><%= link_to 'Edit', edit_post_path(post) if current_account.role == "admin" %> <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete unless current_account.role == "user"%> </p>
       <% end %>
     <td>
   </tr>
@@ -16,5 +22,5 @@
 
 <br />
 <% if account_signed_in? %>
-<%= link_to 'New Post', new_post_path unless current_account.role == "user" %>
+<%= link_to 'New Post', new_post_path if current_account.role == "admin" %>
 <% end %>
