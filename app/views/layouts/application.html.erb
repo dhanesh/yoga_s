@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>YogaS</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-  <table align="center" width="80%" id="page">
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "YogaS" %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+   <table align="center" width="1000px" id="page">
     <tr>
       <td>
         <table id="header_img" cellpadding="10" cellspacing="10">
           <tr height="80px" colspan="4">
             <td>
-              <img src="http://research.nodebox.net/data/media/header.jpg" />
+              <img src="/images/beachsand.jpg" />
             </td>
           </tr>
         </table>
-        <table id="nav_bar" cellpadding="10" cellspacing="10">
+        <table id="nav_bar" cellpadding="10" cellspacing="10" width="100%">
           <tr>
             <td><%= link_to "Home", root_path %></td>
             <td><%= link_to "Blog", posts_path %></td>
@@ -32,11 +33,15 @@
             </td>
           </tr>
         </table>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-        <%= yield %>
-      </td>
-    </tr>
-  </table>
-</body>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      <%= content_tag :h1, yield(:title) if show_title? %>
+      <%= yield %>
+    </td>
+  </tr>
+</table>
+    </div>
+  </body>
 </html>
