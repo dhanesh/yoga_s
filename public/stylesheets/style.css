@@ -408,16 +408,16 @@ a.readmore:hover, #sidebar div.custom-sidebar-block ul.control li a:hover, ul#ca
 
 .foursixeight { margin: 0px 0px 15px 84px;}
 
-.author-shortcodes { margin: 25px 0 15px 0; border: 1px solid #e1e1e1; border-bottom: 1px solid #979797; background: url(images/author-shortcodes-topbg.png) repeat-x; padding-top:1px; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; position: relative; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1); -moz-box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1); width:960px; text-align:justify}
+.author-shortcodes { margin: 25px 0 15px 0; border: 1px solid #e1e1e1; border-bottom: 1px solid #979797; background: url(/images/author-shortcodes-topbg.png) repeat-x; padding-top:1px; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; position: relative; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1); -moz-box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1); width:960px; text-align:justify}
 
-	.author-inner { background: #fbfbfb url(images/author-bg.png) repeat-x bottom left; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; padding: 17px 21px 10px 17px; }
+	.author-inner { background: #fbfbfb url(/images/author-bg.png) repeat-x bottom left; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; padding: 17px 21px 10px 17px; }
 	
 		.author-inner .author-image { width: 62px; position: absolute; padding-left:6px;
 padding-top:6px; min-height: 85px; }
 
 .author-image img, .t-img img { border: none !important; }
 				
-.author-inner .author-image .author-overlay { width: 69px; position: absolute; height: 75px; top: 0px; left: 0px; background: url(images/author-overlay-bg.png) no-repeat; }
+.author-inner .author-image .author-overlay { width: 69px; position: absolute; height: 75px; top: 0px; left: 0px; background: url(/images/author-overlay-bg.png) no-repeat; }
 			
 .author-inner .author-info { padding-left: 83px; }	
 
