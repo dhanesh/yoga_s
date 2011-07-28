@@ -1,47 +1,82 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= content_for?(:title) ? yield(:title) : "YogaS" %></title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../CSS/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/CSS/shortcodes.css">
+<link rel="stylesheet" type="text/css" href="/CSS/jquery.css">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title><%= content_for?(:title) ? yield(:title) : "..:: Divine Yoga ::.." %></title>
+<!-- TemplateEndEditable -->
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
-  </head>
-  <body>
-   <table align="center" width="1000px" id="page">
-    <tr>
-      <td>
-        <table id="header_img" cellpadding="5" cellspacing="5">
-          <tr colspan="5">
-            <td>
-              <img src="/images/beachsand.jpg" />
-            </td>
-          </tr>
-        </table>
-        <table id="nav_bar" cellpadding="5" cellspacing="5" width="100%">
-          <tr>
-            <td><%= link_to "Home", root_path %></td>
-            <td><%= link_to "Blog", posts_path %></td>
-            <td>Gallery</td>
-            <td>Discussion</td>
-            <td>
+</head>
+<body>
+<div class="center-highlight">
+<div id="top">
+<div class="container">
+			<div id="header">
+				<a href="/index.html">
+					<img src="/images/YogaLogo.gif" alt="Divine Yoga" />					
+				</a>
+				<div id="menu" class="clearfix">
+					<ul id="primary" class="nav">
+					<li id="menu-item-191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-191">
+						<a href="#"><%= link_to "Home", root_path %></a>
+					</li>
+<li id="menu-item-184" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-184"><a href="#"><%= link_to "Blog", posts_path %></a></li>
+<li id="menu-item-183" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-183"><a href="#">About Us </a>
+  <ul class="sub-menu">
+	<li id="menu-item-188" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-188"><a href="#">Sub Menu 1</a></li>
+	<li id="menu-item-185" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-185"><a href="#">Sub Menu 2</a></li>
+	<li id="menu-item-189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-189"><a href="#">Nature</a></li>
+	<li id="menu-item-190" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-190"><a href="#">People</a></li>
+</ul>
+</li>
+<li id="menu-item-181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181"><a href="#">Forum</a></li>
+<li id="menu-item-180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180"><a href="#">Contact Us </a></li>
+</ul>						
+					<div id="search-form">
+						<form method="get" id="searchform" action="http://www.elegantthemes.com/preview/DeepFocus">
+							<input type="text" value="search this site..." name="s" id="searchinput" />
+
+							<input type="image" src="http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/search-btn.png" id="searchsubmit" />
+						</form>
+					</div> <!-- end #search-form -->
+				</div> <!-- end #menu -->		
+			</div> <!-- end #header -->
+		</div>
+		</div>
+<div class="container">
             <% if current_account then %>
               <%= link_to "Sign Out", destroy_account_session_path, :method => :delete %>
             <% else %>
               <%= link_to 'Sign In', new_account_session_path %>
             <% end %>
-            </td>
-          </tr>
-        </table>
-    <div id="container">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
-    </td>
-  </tr>
-</table>
-    </div>
-  </body>
+
+<!-- TemplateBeginEditable name="body" -->
+
+<!-- TemplateEndEditable -->
+</div>
+<div id="footer">
+			<div id="footer-wrapper">
+				<div id="footer-center">
+					<div class="container">
+													
+						<p id="copyright">Designed & Powered by  <a href="http://www.elegantthemes.com/" title="Stealth Solutions">Stealth Solutions</a></p>
+						
+					</div> <!-- end .container -->
+				</div> <!-- end #footer-center -->
+			</div> <!-- end #footer-wrapper -->
+		</div> <!-- end #footer -->
+				</div>
+	
+</body>
 </html>
