@@ -1,0 +1,427 @@
+/*
+Theme Name: DeepFocus
+Theme URI: http://www.elegantthemes.com/gallery/
+Version: 2.7
+Description: 2 Column theme from Elegant Themes
+Author: Elegant Themes
+Author URI: http://www.elegantthemes.com
+*/
+
+
+/*------------------------------------------------*/
+/*-----------------[RESET]------------------------*/
+/*------------------------------------------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q {	quotes: none; }
+
+blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
+
+/* remember to define focus styles! */
+:focus { outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/*------------------------------------------------*/
+/*-----------------[BASIC STYLES]-----------------*/
+/*------------------------------------------------*/
+
+body { text-align: center; line-height: 21px; font-family: Arial, Verdana, sans-serif; font-size: 13px; color: #ffffff; min-height: 25px; background: #575757 url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/bg.jpg); }
+
+a { text-decoration: none; color: #00b7f3; }
+a:hover { text-decoration: underline; }
+.clear { clear: both; }
+.ui-tabs-hide { display: none; }
+br.clear { margin: 0px; padding: 0px; }
+
+h1, h2, h3, h4, h5, h6 { padding-bottom: 5px; color: #808080; letter-spacing: -1px; line-height: 1em; font-weight: normal; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #808080; }
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3 { font-size: 22px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+p { padding-bottom: 10px; line-height: 18px; }
+strong { font-weight: bold; color: #1c1c1c; }
+cite, em, i { font-style: italic; }
+pre, code { font-family: Courier New, monospace; margin-bottom: 10px; }
+ins { text-decoration: none; }
+sup, sub { height: 0; line-height: 1; position: relative; vertical-align: baseline; }
+sup { bottom: 0.8em; }
+sub { top: 0.3em; }
+dl { margin: 0 0 1.5em 0; }
+dl dt { font-weight: bold; }
+dd  { margin-left: 1.5em;}
+blockquote  { margin: 1.5em; padding: 1em; color: #666666; background: #e6e6e6; font-style: italic; border: 1px solid #dcdcdc; text-shadow: none !important; }
+	blockquote p { padding-bottom: 0px; }
+
+input[type=text],input.text, input.title, textarea, select { background-color:#fff; border:1px solid #bbb; padding: 2px; color: #4e4e4e; }
+input[type=text]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus { border-color:#2D3940; color: #3e3e3e; }
+input[type=text], input.text, input.title, textarea, select { margin:0.5em 0; }
+textarea { padding: 4px; }
+
+img#about-image { float: left; margin: 3px 8px 8px 0px; }
+
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/*------------------------------------------------*/
+/*---------------[MAIN LAYOUT INFO]---------------*/
+/*------------------------------------------------*/
+
+.container { text-align: left; margin: 0 auto; width: 960px; position: relative; }
+
+#top { background: #d2d2d2 url(../images/beachsand.gif) no-repeat center; border-bottom: 1px solid #ffffff; padding-top: 70px;}
+
+#header { height: 100px; }
+/*body#home-featured #header {height: 202px;}*/
+	#home-top { background:url("http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/top-bg.png") repeat-x bottom left #D2D2D2; width: 100%; height: 102px; position: absolute; top: -1px; left: 0px; z-index: 1; border-bottom:1px solid #FFFFFF; }
+	
+	#logo { position: absolute; top: 0px; left: 0px; }
+	
+	#menu { position: absolute; top: 46px; left: 0px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/menu-bg.png) no-repeat; width: 960px; height: 55px; }
+	
+		#search-form {float: right; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/search-bg.png) no-repeat; width: 150px; height: 31px; margin: 13px 10px 0px 0px;}
+			input#searchinput { background:none; border: none; font-size: 12px; font-style: italic; color: #7d7d7d; text-shadow: 1px 1px 1px #ffffff; margin-top:0px; padding-left:13px; width:105px; float: left; margin-right: 4px; position: relative; top: 6px; }
+			input#searchsubmit { float:left; margin-top:9px; }
+			
+#content-full { position: relative; }
+	.center-highlight { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/light-overlay.png) repeat-y top center; text-shadow: 2px 2px 1px rgba(0,0,0,0.25); }
+	
+	
+	
+#intro { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/intro-bg.png); }
+	#hr { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/shadow-bar-bg.png) repeat-x bottom left; }
+body#home-featured #hr { min-height: 479px; }	
+		#hr-center { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/shadow-bar-centerbg.png) no-repeat bottom center; }
+	
+#portfolio-items { padding-bottom: 20px; }
+	#portfolio-items .item { position: relative; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/item-bottom-shadow.png) no-repeat bottom left; padding-bottom: 5px; float: left; margin: 0px 33px 32px 0px; }
+	#portfolio-items .last {margin-right: 0px;}
+	.item-image { position:relative; top:0; }
+		#portfolio-items .item img.portfolio { border: 3px solid #e5e5e5; }
+		.item-image span.overlay { position: absolute; top: 3px; left: 3px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/item-overlay.png) no-repeat; width: 207px; height: 136px; }
+		a.zoom-icon, a.more-icon { display: block; width: 61px; height: 61px; text-indent: -9999px; position: absolute; top: 41px; }
+		a.zoom-icon { left: 31px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/zoom-icon.png) no-repeat; }
+		a.more-icon { left: 128px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/readmore-icon.png) no-repeat; }
+			#tagline {line-height: 26px; padding-bottom: 60px; padding-top:30px;}
+				#tagline p {font-size: 48px; color: #fff; background:url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/quote-left.png) no-repeat left top; padding:0px 0px 0 40px; min-height:34px; }
+				#tagline span {background:url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/quote-right.png) no-repeat right bottom; padding:0 50px 3px 40px; font-size: 24px; color: #fff;  }
+		div.service {float:left; width:274px; padding: 52px 65px 26px 0px;}		
+		#blog {padding-right: 0px; width:282px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/fromblog-bottom.png) no-repeat bottom left; padding-bottom: 16px; position: relative; }
+			h3.hometitle {font-size: 30px; color:#fff; padding-bottom: 8px; }
+			a.readmore {float: right; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/readmore.png) no-repeat bottom right; height: 38px; display: block; font-size: 18px; color: #323232 !important; padding-right: 9px; margin-top: 14px; font-weight: normal;}
+				a.readmore span { display: block; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/readmore.png) no-repeat; padding:9px 5px 4px 12px; height:38px; }
+			a.readmore:hover { color: #ffffff; }	
+			
+			#blog-top {background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/fromblog-top.png) no-repeat; height: 11px;}
+			#blog-wrapper {background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/fromblog-mainbg.png) repeat-y #eeeeee; padding: 0px 1px 0px 1px; }
+				#blog-content{background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/fromblog-top-gradient.png) repeat-x; padding: 7px 22px 6px 24px; }
+					#blog-content h4.widgettitle {font-size: 24px; color: #333333; padding-bottom: 12px; }
+					
+					#blog-content ul li { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/fromblog-bullet.png) no-repeat 0px 5px; padding: 0px 0px 15px 17px; }
+						#blog-content ul li a.title  {display: block; color: #7d7d7d; font-size: 14px; text-shadow: 1px 1px 1px #ffffff; margin-bottom:-3px;}
+							#blog-content ul li a.title:hover, #blog-content span.postinfo a:hover { color: #000000; text-decoration: none; }
+						#blog-content span.postinfo, #blog-content span.postinfo a { color: #9d9d9d; font-size: 12px; font-style: italic; text-shadow: 1px 1px 1px #ffffff; }	
+					
+				#controllers2 { position: absolute; bottom: -12px; left: 102px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/fromblog-controllers-bg.png) no-repeat; width: 75px; height: 38px; }
+					#controllers2 a { display: block; text-indent: -9999px; width: 23px; height: 15px; float: left; }
+						#controllers2 a#left-arrow { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/fromblog-controllers-down.png) no-repeat; margin: 11px 0px 0px 12px; }
+						#controllers2 a#right-arrow { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/fromblog-controllers-top.png) no-repeat; margin: 11px 0px 0px 7px; }
+						
+	#breadcrumbs { color: #ffffff; padding: 27px 0px; }
+		#breadcrumbs .raquo , #breadcrumbs a { color: #b9b9b9; }
+		#breadcrumbs a:hover { color: #ffffff; text-decoration: none; }
+		
+	#content-area { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/sidebar-bg.png) 688px 0px repeat-y; padding: 38px 0px; }
+	#full { background: none; padding: 38px 0px }
+		#left-area { width: 100%; float: left; }
+		
+			.entry { margin-bottom: 45px; }
+				.blog-thumb { position: relative; float: left; margin-right: 23px;  }
+					.blog-thumb span.overlay { position: absolute; top: 0px; left: 0px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/blog-overlay.png) no-repeat; }
+					.blog-thumb, .blog-thumb span.overlay { width: 185px; height: 191px; }
+				.entry-description { float: left; width: 443px; }
+				.full-description { width: 651px; }
+					p.post-meta { border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; background: rgba(0, 0, 0, 0.2); border-bottom:1px solid #909090; border-right:1px solid #909090; padding: 5px 13px 5px 12px; font-style: italic; font-size: 11px; float: left; margin-bottom: 11px; }
+					p.post-meta, p.post-meta a { color: #cccccc; font-weight: normal !important; }
+					.post p.post-meta { width: 404px; }
+					p.post-meta a:hover { color: #ffffff; text-decoration: none; }
+					
+				
+				.entry h2.title, .entry h1.title { font-size: 36px; padding-bottom: 11px; color: #ffffff; }
+					.entry h2.title a { color: #ffffff; font-weight: normal !important; }
+					.entry h2.title a:hover { text-decoration: none; }
+					.entry a.readmore { margin-top: 5px; }
+					
+					.entry a { color:#FFFFFF; font-weight:bold; }
+				
+				.post { width: 648px; margin-bottom:17px; }
+				.full { width: 960px; }
+				
+				.entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 { color: #ffffff; } 
+					
+	#gallery { padding: 29px 0px 0px; }
+	
+	.gallery-thumb { position: relative; float: left; border:3px solid #E3E3E3; margin: 16px 0px 45px; }
+		.gallery-thumb a { display: block; }
+		.gallery-thumb img { max-width: 650px; }
+		.gallery-thumb .overlay { width: 100%; height: 100%; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/gallery-overlay.png) no-repeat; display: block; position: absolute; top: 0px; left: 0px; }
+		.gallery-thumb-bottom { position: absolute; bottom: -24px; left: 0px; height: 21px; width: 34%; padding: 0px 217px; }
+			.gallery-thumb-bottom .bg { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/gallery-thumb-bottombg.png) repeat-x; height: 14px; }
+			.gallery-thumb-bottom .left-shadow { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/gallery-bottom-leftshadow.png) no-repeat; width: 217px; height: 21px; position: absolute; top: 0px; left: 0px; }
+			.gallery-thumb-bottom .right-shadow { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/gallery-bottom-rightshadow.png) no-repeat; width: 217px; height: 21px; position: absolute; top: 0px; right: 0px; }
+			
+			
+/*------------------------------------------------*/
+/*---------------[DROPDOWN MENU]------------------*/ 
+/*------------------------------------------------*/
+
+ul.nav { float: left; padding: 20px 0px 0px 4px; }
+	ul.nav li { margin-left: 17px; }
+		ul.nav a { font-size: 16px; color: #535353; text-decoration: none; text-shadow: 1px 1px 0px #fff; padding-bottom: 13px; }
+		ul.nav a:hover { color: #000000; text-shadow: 1px 1px 0px #fff; }
+		
+	ul.nav ul { width: 189px; background: #e7e7e7 url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/dropdown-bottom.png) bottom left repeat-x; border: 1px solid #ffffff; border-top: none; top: 34px !important; box-shadow: 3px 6px 7px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow:3px 6px 7px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 3px 6px 7px 1px rgba(0, 0, 0, 0.1); border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-top-left-radius: 0px;-moz-border-radius-topleft: 0px; border-top-right-radius: 0px; -webkit-border-top-left-radius: 0px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; padding: 16px 0px 10px; z-index: 9999px; display: none; }
+		ul.nav ul li { margin: 0px; padding: 0px 4px 20px 18px; }
+			ul.nav ul li a { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/dropdown-bullet.png) no-repeat 0px 1px; padding: 0px 0px 0px 17px; width: 130px; }
+			
+			ul.nav li:hover ul ul, ul.nav li.sfHover ul ul { top: -16px !important; left: 191px !important; border-top-right-radius: 8px; -moz-border-radius-topright: 8px; -webkit-border-top-right-radius: 8px; }
+			
+/*------------------------------------------------*/
+/*--------------[FEATURED SLIDER]-----------------*/
+/*------------------------------------------------*/
+
+#featured { position: relative; /*top: -102px; margin-bottom:-95px;*/ padding-bottom: 31px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-bottom-shadow.png) no-repeat bottom left; height: 447px; z-index:4; }
+	#featured span#left-shadow, #featured span#right-shadow { width: 9px; height: 132px; display: block; position: absolute; z-index: 1; top: -30px; }
+	#featured span#left-shadow { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-leftshadow.png) no-repeat; left: -9px; }
+	#featured span#right-shadow { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-rightshadow.png) no-repeat; right: -9px; }
+		#slides { position: relative; height: 447px; background: #000000; }
+			.slide .overlay { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/slide-top-shadow.png) repeat-x; top: 0px; left: 0px; height: 17px; position: absolute; width: 960px; }
+			.slide .overlay2 { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/slide-bottom-shadow.png) repeat-x; bottom: 0px; left: 0px; height: 4px; position: absolute; width: 960px; }
+			
+			#slides .description { line-height: 18px; color: #8e8d8d; text-shadow: 1px 1px 1px #ffffff; font-size: 12px; position: absolute; top: 33px; right: -11px; width: 275px; padding-top: 19px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/description-top.png) no-repeat; z-index: 14; }
+			#slides .description .outer-content { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/description-center-outer.png) repeat-y; padding: 0px 1px 0px 7px; }
+				#slides .description .inner-content { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/description-center-inner.png) repeat-x bottom left; padding: 3px 16px 10px 28px; }
+			#slides .description .bottom { height: 36px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/description-bottom.png) no-repeat; }
+				
+				#slides .description h2.title { font-size: 32px; padding-bottom: 10px; }
+					#slides .description h2.title a { color: #363636; }
+						#slides .description h2.title a:hover { text-decoration: none; }
+				
+				#slides .description a.readmore { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-readmore.png) no-repeat bottom right; font-size: 12px; color: #ffffff !important; text-shadow: -1px -1px 1px #000000; padding-right: 8px; display: block; height: 35px; float: left; left: 89px; top: -12px; position: relative; }
+					#slides .description a.readmore span { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-readmore.png) no-repeat; display: block; height: 35px; line-height: 32px; padding: 0px 12px 0px 20px; }
+				#slides .description a.readmore:hover { color: #eeeeee; }
+			
+	#controllers-wrapper { position: absolute; bottom: 11px; left: 380px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-controllers-left.png) no-repeat; height: 44px; padding-left: 12px; z-index:30; }
+		#controllers-wrapper #controllers { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-controllers-bg.png) repeat-x; height: 30px; padding-top: 14px; }
+		#controllers-wrapper #controllers, #controllers-wrapper #controllers-right { float: left; }
+		#controllers-wrapper #controllers-right { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-controllers-right.png) no-repeat; height: 44px; width: 8px; }
+		
+		#controllers-wrapper a { text-indent: -9999px; display: block; float: left; width: 15px; height: 15px; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-controller.png) no-repeat; margin-right: 3px; }
+		#controllers-wrapper a.active { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-controller-active.png) no-repeat; }
+		
+		#controllers-wrapper a#left-arrow, #controllers-wrapper a#right-arrow { width: 15px; height: 23px; position:relative;
+top:-4px; }
+		#controllers-wrapper a#left-arrow { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-controllers-leftarrow.png) no-repeat; margin-right: 17px; }
+		#controllers-wrapper a#right-arrow { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/featured-controllers-rightarrow.png) no-repeat; margin-left: 16px; }
+		.recentscroll { height:162px; overflow:hidden; }
+			.recentscroll ul { height: 32000px; }
+		
+		h3.recentworks { padding: 7px 0px 24px; }
+		a.entergallery { margin-top: -3px; }
+		
+		.entry ul, .comment-content ul { list-style-type: disc; margin: 10px 0px 10px 20px; }
+		.entry ol, .comment-content ol { list-style-type: decimal; list-style-position: inside; margin: 10px 0px 10px 2px; }
+			.entry ul li ul, .entry ul li ol, .comment-content ul li ul, .comment-content ul li ol { margin: 2px 0px 2px 20px; }
+			.entry ol li ul, .entry ol li ol, .comment-content ol li ul, .comment-content ol li ol  { margin: 2px 0px 2px 35px; }
+		
+/*------------------------------------------------*/
+/*-------------------[COMMENTS]-------------------*/
+/*------------------------------------------------*/
+
+#comment-wrap { padding: 30px 40px 0px 0px; }
+	
+h3#comments { font-size: 30px; padding: 0px 0px 25px; color: #ffffff; }
+
+.comment-icon { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/comment-bottom-bg.png) no-repeat bottom left; padding-bottom: 14px; }
+
+.comment-icon .post { padding: 3px 0px 0px; }
+
+div.authordata { width: 100px; }
+	div.avatar { float: left; position: relative; padding:3px; }
+		div.avatar span.overlay { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/avatar-overlay.png) no-repeat; display: block; width: 67px; height: 67px; position: absolute; top: 0px; left: 0px; }
+		
+	.comment-wrap { float:left; margin-left:20px; }
+				
+			
+		.reply-container { background:url("http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/readmore.png") no-repeat scroll right bottom transparent; display:block; float:right; font-size:18px; font-weight:normal; height:38px; margin-top:14px; padding-right:9px; }
+			.reply-container a { background:url("http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/readmore.png") no-repeat scroll 0 0 transparent; display:block; height:38px;
+padding:9px 5px 4px 12px; color:#323232 !important; }
+			.reply-container a:hover { text-decoration: none; color: #eeeeee; }
+			
+	li.depth-1 .comment-wrap { width: 546px; }
+	li.depth-2 .comment-wrap { width: 465px; }
+	li.depth-3 .comment-wrap { width: 383px; }
+	li.depth-4 .comment-wrap { width: 301px; }
+	
+	.fullwidth li.depth-1 .comment-wrap { width: 811px; }
+	.fullwidth li.depth-2 .comment-wrap { width: 729px; }
+	.fullwidth li.depth-3 .comment-wrap { width: 647px; }
+	.fullwidth li.depth-4 .comment-wrap { width: 565px; }
+		
+	ol.commentlist { list-style:none outside none; padding-top:8px; }
+		ol.commentlist ul { list-style:none outside none; }
+	
+		.commentlist li.comment li { background: none; padding: 0px; }
+		.commentlist li.comment ul { margin: 8px 0px 8px 82px; }
+		
+	#respond { padding-top: 25px; }
+		.comment #respond { padding-left: 0px; padding-top: 5px; }
+		#commentform textarea#comment { width: 88%; }
+		#commentform input[type=text] { width: 40%; }
+		
+	
+		li.comment #respond textarea { width: 88% !important; }
+		li.comment #respond input[type=text] { width: 50% !important; }
+		
+	#respond h3#comments { background: none; margin: 0px; padding: 0px; } 
+	
+	.comment-author { padding: 2px 0px; font: 21px Arial,sans-serif; }
+		.comment-author .comment-meta, .comment-author .comment-meta a { color: #c0bfbf; }
+			.comment-author .comment-meta a:hover { text-decoration: none; }
+		span.fn, span.fn a { color: #ffffff; }
+			span.fn a:hover { text-decoration: none; }
+		
+	.comment-content { padding-top:5px; }
+	
+	.comment-body { padding: 8px 0px; }
+		
+/*------------------------------------------------*/
+/*---------------------[FOOTER]-------------------*/
+/*------------------------------------------------*/
+	
+#footer { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/footer-overlay-bg.png); padding-bottom: 15px; }	
+	#footer-wrapper { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/footer-top-bg.png) repeat-x; }
+		#footer-center { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/footer-top-centerbg.png) no-repeat; /*min-height: 147px;*/ padding-top: 35px; color: #b9b9b9; }
+			#footer p#copyright a { color: #ffffff; font: italic 12px Arial, sans-serif;  }
+		#footer .widget { float: left; width: 280px; margin: 0px 60px 45px 0px; }
+			#footer .widget a { color: #ffffff; }
+			#footer .last { margin-right: 0px; }
+	
+/*------------------------------------------------*/
+/*--------------------[SIDEBAR]-------------------*/
+/*------------------------------------------------*/
+
+#sidebar { float: left; width: 269px; }
+	.widget h4.widgettitle { font-size: 30px; text-shadow: 1px 1px 0px rgba(255,255,255,0.3); color: #000000; }
+	#sidebar  a { color: #ffffff; }
+	#sidebar .widget { padding: 0px 0px 50px 22px; }
+	
+	.widget ul ul { margin: 0px 0px 0px 15px; }
+		.widget ul li { background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/widget-bullet.png) no-repeat 0px 12px; padding: 4px 0px 4px 16px; }
+			.widget ul li ul { padding:5px 0px 0px 7px; margin: 0px 0px -4px; }
+				
+/*------------------------------------------------*/
+/*------------[CAPTIONS AND ALIGNMENTS]-----------*/
+/*------------------------------------------------*/
+
+div.post .new-post .aligncenter, .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.wp-caption { border: 1px solid #ddd; text-align: center; background-color: #f3f3f3; padding-top: 4px; margin-bottom: 10px; }
+.wp-caption.alignleft { margin: 0px 10px 10px 0px; }
+.wp-caption.alignright { margin: 0px 0px 10px 10px; }
+.wp-caption img { margin: 0; padding: 0; border: 0 none; }
+.wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; padding: 0 4px 5px; margin: 0; }
+.alignright { float: right; }
+.alignleft { float: left }
+img.alignleft { display:inline; float:left; margin-right:15px; }
+img.alignright { display:inline; float:right; margin-left:15px; }
+
+	
+/*------------------------------------------------*/
+/*---------------[DEFAULT DROPDOWN SETTINGS]---*/
+/*------------------------------------------------*/
+
+.nav ul { position:absolute; top:-999em; background-position: bottom; background-repeat: no-repeat; z-index: 10; }
+.nav li { float:left; position:relative; }
+.nav a { display:block; float: left; }
+	.nav li:hover ul, ul.nav li.sfHover ul { left:0px; top:50px; }
+	.nav li:hover li ul, .nav li.sfHover li ul { top:-999em; }
+		.nav li li:hover ul, ul.nav li li.sfHover ul { left:192px; top:0px; }
+	.nav li:hover ul, .nav li li:hover ul { top: -999em; }
+	.nav li li {	display: block;	padding: 0px; float: left; height: auto !important; }
+	.nav li ul { width: 191px; }
+		.nav li li a:link, .nav li li a:visited {	display: block; height: auto; float: left; }
+		.nav li:hover { visibility: inherit; /* fixes IE7 'sticky bug' */ }
+
+
+/*------------------------------------------------*/
+/*-----------------[WP CALENDAR]-----------------*/
+/*------------------------------------------------*/
+#wp-calendar { empty-cells: show; margin: 10px auto 0; width: 240px;	}
+	#wp-calendar a { display: block; text-decoration: none; font-weight: bold; }
+		#wp-calendar a:hover { text-decoration: underline; }
+	#wp-calendar caption {	text-decoration: none; font: bold 13px Arial, Sans-Serif; }
+	#wp-calendar td {	padding: 3px 5px; color: #9f9f9f; }
+		#wp-calendar td#today { color: #ffffff; }
+	#wp-calendar th {	font-style: normal;	text-transform: capitalize;	padding: 3px 5px; }
+		#wp-calendar #prev a, #wp-calendar #next a { font-size: 9pt; }
+		#wp-calendar #next a { padding-right: 10px; text-align: right; }
+		#wp-calendar #prev a { padding-left: 10px; text-align: left; }
+		
+/*------------------------------------------------*/
+/*-------------------[PAGE NAVI]------------------*/
+/*------------------------------------------------*/
+.pagination { overflow: hidden; padding: 15px 12px 0px; }
+
+.wp-pagenavi { position: relative; padding: 12px 30px 20px 0px; text-align:right; }
+.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:visited { padding: 5px 7px !important; margin: 2px; text-decoration: none; font-weight: normal !important; font-size: 18px !important; color: #6d6d6d !important; border: none !important; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/pagenavi-bg.png) no-repeat; padding:6px 19px 12px 14px !important; text-shadow: 1px 1px 0px #ffffff; }
+.wp-pagenavi span.current { font-size: 18px !important; color: #000000 !important; text-shadow: 1px 1px 0px #ffffff; }
+.wp-pagenavi span.current, .wp-pagenavi span.extend, .wp-pagenavi a:active, .wp-pagenavi a:hover { padding:6px 19px 12px 14px !important; margin: 2px; border: none !important; background: url(http://www.elegantthemes.com/preview/DeepFocus/wp-content/themes/DeepFocus/images/pagenavi-bg.png) no-repeat; }
+.wp-pagenavi span.pages { padding: 5px 7px 5px !important; margin: 2px !important ; color: #000000; color: #413f36; border: none !important; color: #000000; }
+
+
+a.readmore:hover, #sidebar div.custom-sidebar-block ul.control li a:hover, ul#cats-menu li a:hover, ul#page-menu li a:hover, div#slider-control div.featitem h2 a  { text-decoration: none; }
+
+.js #feat-content, .js div#from-blog div.entries {display: none;} 
+
+.foursixeight { margin: 0px 0px 15px 84px;}
+
+.author-shortcodes { margin: 25px 0 15px 0; border: 1px solid #e1e1e1; border-bottom: 1px solid #979797; background: url(images/author-shortcodes-topbg.png) repeat-x; padding-top:1px; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; position: relative; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1); -moz-box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1); width:960px; text-align:justify}
+
+	.author-inner { background: #fbfbfb url(images/author-bg.png) repeat-x bottom left; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; padding: 17px 21px 10px 17px; }
+	
+		.author-inner .author-image { width: 62px; position: absolute; padding-left:6px;
+padding-top:6px; min-height: 85px; }
+
+.author-image img, .t-img img { border: none !important; }
+				
+.author-inner .author-image .author-overlay { width: 69px; position: absolute; height: 75px; top: 0px; left: 0px; background: url(images/author-overlay-bg.png) no-repeat; }
+			
+.author-inner .author-info { padding-left: 83px; }	
+
+.author-shortcodes { color:#201F1F !important; text-shadow: none !important; }
+
+.one_third { width: 30.66%; text-align:justify}
+.two_third { width:65.32%; text-align:justify}
